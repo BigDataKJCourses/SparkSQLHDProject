@@ -7,8 +7,7 @@ val sparkVersion = "3.5.0"
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "com.mysql" % "mysql-connector-j" % "9.0.0",
-  "com.databricks" %% "spark-xml" % "0.18.0",
-  "io.delta" %% "delta-spark" % "3.2.0"
+  "com.databricks" %% "spark-xml" % "0.18.0"
 )
 
 lazy val root = (project in file("."))
