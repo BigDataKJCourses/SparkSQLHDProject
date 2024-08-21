@@ -8,7 +8,7 @@ import org.apache.spark.sql.SparkSession
 object ETLWProdukty {
 
   def main(args: Array[String]): Unit = {
-    if (args.length < 4) {
+    if (args.length < 3) {
       println("Usage: ETLWProdukty <mysqlURL> <mysqlUser> <mysqlPass>")
       System.exit(1)
     }
