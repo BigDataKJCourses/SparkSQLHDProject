@@ -1,6 +1,7 @@
 package com.example.bigdata
 
 import com.databricks.spark.xml.XmlDataFrameReader
+import com.example.bigdata.tools.GetContext.getSparkSession
 import com.example.bigdata.tools.GetData.getSprzedaz
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
@@ -18,15 +19,7 @@ object ETLWCzas {
     val mysqlUser = args(2)
     val mysqlPass = args(3)
 
-    val master = sys.props.getOrElse("spark.master", "local[*]")
-
-    val conf: SparkConf = new SparkConf()
-      .setAppName("SparkWordCount")
-      .setMaster(master)
-
-    val spark = SparkSession.builder()
-      .config(conf)
-      .getOrCreate()
+    val spark = getSparkSession("ETLWCzas")
 
     import spark.implicits._
 
