@@ -3,8 +3,6 @@ package com.example.bigdata
 import com.databricks.spark.xml.XmlDataFrameReader
 import com.example.bigdata.tools.GetContext.getSparkSession
 import com.example.bigdata.tools.GetData.getSprzedaz
-import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.udf
 
 object ETLWCzas {

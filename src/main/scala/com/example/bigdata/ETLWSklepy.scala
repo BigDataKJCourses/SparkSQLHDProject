@@ -1,8 +1,6 @@
 package com.example.bigdata
 
 import com.example.bigdata.tools.GetContext.getSparkSession
-import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
 
 object ETLWSklepy {
   def main(args: Array[String]): Unit = {

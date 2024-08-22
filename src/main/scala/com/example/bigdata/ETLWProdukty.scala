@@ -2,8 +2,6 @@ package com.example.bigdata
 
 import com.example.bigdata.tools.GetContext.getSparkSession
 import com.example.bigdata.tools.GetData.getProdukty
-import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
 
 object ETLWProdukty {
 
