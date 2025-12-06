@@ -1,6 +1,5 @@
 package com.example.bigdata
 
-import com.databricks.spark.xml.XmlDataFrameReader
 import com.example.bigdata.tools.GetContext.getSparkSession
 import com.example.bigdata.tools.GetData.getSprzedaz
 import org.apache.spark.sql.functions.udf
@@ -22,7 +21,6 @@ object ETLWCzas {
     import spark.implicits._
 
     val dniWolneDF = spark.read.
-      format("com.databricks.spark.xml").
       option("rootTag", "DNI_WOLNE").
       option("rowTag", "DATA").
       xml(s"$externalDataPath/dni_wolne.xml")

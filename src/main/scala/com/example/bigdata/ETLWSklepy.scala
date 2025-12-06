@@ -13,7 +13,7 @@ object ETLWSklepy {
 
     val spark = getSparkSession("ETLWSklepy")
 
-    val sklepyDF = spark.read.format("org.apache.spark.csv")
+    val sklepyDF = spark.read
       .option(key = "header", value = true)
       .option(key = "inferSchema", value = true)
       .csv(s"$externalDataPath/sklepy.txt").cache()
